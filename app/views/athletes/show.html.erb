@@ -1,0 +1,8 @@
+<h1><%= @athlete.name %></h1>
+<h3>AGE: <%= @athlete.age %></h3>
+<h3>SPORT: <%= @athlete.sport %></h3>
+<h3>CAREER LENGTH: <%= @athlete.years_participated %> years</h3>
+<h3>GENDER: <%= @athlete.gender %></h3>
+<h3>ALIVE <%= @athlete.alive ? 'Yes' : 'No' %></h3>
+
+<%= link_to 'Edit', edit_athlete_path(@athlete) %>

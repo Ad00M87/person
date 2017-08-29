@@ -1,0 +1,15 @@
+<h1>Athlete Index</h1>
+<h2>Click name to view profiles</h2>
+<%= link_to 'New Athlete', new_athlete_path %>
+
+<% @athlete.each do |athlete| %>
+
+<div class="index">
+  <h3><%= link_to athlete.name, athlete_path(athlete) %></h3>
+  <strong>Sport: <%= athlete.sport %></strong>
+  <i>ALIVE: <%= athlete.alive ? 'YES' : 'NO' %></i>
+  <br>
+  <%= link_to 'Delete', athlete_path(athlete), method: :delete %>
+</div>
+
+<% end %>

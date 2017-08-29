@@ -1,0 +1,38 @@
+<h1>Editing: <%= @athlete.name %></h1>
+
+<%= form_for @athlete do |f| %>
+  <div>
+    <%= f.text_field :name, placeholder: 'Name', required: true %>
+    <%= f.label :name %>
+  </div>
+
+  <div>
+    <%= f.text_field :age, placeholder: 'Age', required: true %>
+    <%= f.label :age%>
+  </div>
+
+  <div>
+    <%= f.text_area :sport, placeholder: 'Sport', required: true %>
+    <%= f.label :sport%>
+  </div>
+
+  <div>
+    <%= f.text_area :years_participated, placeholder: 'Career length', required: true %>
+    <%= f.label :years_participated%>
+  </div>
+
+  <div>
+    <%= f.text_area :gender, placeholder: 'Gender', required: true %>
+    <%= f.label :gender%>
+  </div>
+
+  <div>
+    <%= f.check_box :alive %>
+    <%= f.label :alive %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>
