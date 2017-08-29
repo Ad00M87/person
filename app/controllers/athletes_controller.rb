@@ -15,9 +15,6 @@ class AthletesController < ApplicationController
     @athlete = Athlete.new
   end
 
-  def delete
-  end
-
   def create
     athlete = Athlete.new(athlete_params)
     if athlete.save

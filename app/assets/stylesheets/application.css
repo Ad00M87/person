@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .5));
+  color: white;
+}
+
+.navigation {
+  background: white;
+  color: grey;
+  text-align: center;
+}
+
+.navigation a {
+  padding: 40px 10% 40px 10%;
+  font-size: 30px;
+  text-decoration: none;
+}

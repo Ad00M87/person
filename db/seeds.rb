@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Athlete.all.each do |athlete|
+  Like.create(pokemon: Faker::Pokemon.name,
+              band: Faker::RockBand.name,
+              movie_quote: Faker::Movie.quote,
+              lotr_character: Faker::LordOfTheRings.character,
+              chuck_fact: Faker::ChuckNorris.fact,
+              athlete_id: athlete.id)
+end

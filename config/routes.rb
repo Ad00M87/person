@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'athletes/edit'
+  root 'static_pages#home'
 
-  root 'athletes#index'
+  get 'static_pages/about'
 
   resources :athletes
 end

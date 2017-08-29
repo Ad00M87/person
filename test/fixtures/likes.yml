@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pokemon: MyString
+  band: MyString
+  movie_quote: MyString
+  lotr_character: MyString
+  chuck_fact: MyString
+  athlete: one
+
+two:
+  pokemon: MyString
+  band: MyString
+  movie_quote: MyString
+  lotr_character: MyString
+  chuck_fact: MyString
+  athlete: two
