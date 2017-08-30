@@ -14,13 +14,13 @@
  *= require_self
  */
 body {
-  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .5));
+  background: rgba(0, 0, 0, 1);
   color: white;
 }
 
 .navigation {
   background: white;
-  color: grey;
+  color: rgb(55, 66, 66);
   text-align: center;
 }
 
@@ -28,4 +28,18 @@ body {
   padding: 40px 10% 40px 10%;
   font-size: 30px;
   text-decoration: none;
+  color: rgb(55, 66, 66);
+}
+
+.navigation a:hover {
+  color: rgba(14, 96, 181, 0.9);
+  text-decoration: underline;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }

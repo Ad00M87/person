@@ -1,15 +1,26 @@
-<h1>Athlete Index</h1>
-<h2>Click name to view profiles</h2>
-<%= link_to 'New Athlete', new_athlete_path %>
+<div class="wrapping">
 
-<% @athlete.each do |athlete| %>
+  <h2 class="index-head">Click name to view profiles</h2>
 
-<div class="index">
-  <h3><%= link_to athlete.name, athlete_path(athlete) %></h3>
-  <strong>Sport: <%= athlete.sport %></strong>
-  <i>ALIVE: <%= athlete.alive ? 'YES' : 'NO' %></i>
-  <br>
-  <%= link_to 'Delete', athlete_path(athlete), method: :delete %>
+  <div class="create">
+    <%= link_to 'Add New Athlete', new_athlete_path %>
+  </div>
+
+
+  <% @athlete.each do |athlete| %>
+
+    <div class="index">
+      <h3><%= link_to athlete.name, athlete_path(athlete) %></h3>
+      <table>
+        <td class="sport"><strong class="index-elem">Sport: <%= athlete.sport %></strong></td>
+        <td><i class="index-elem">ALIVE: <%= athlete.alive ? 'YES' : 'NO' %></i></td>
+        <td><div class="index-elem">
+          <%= link_to 'Delete', athlete_path(athlete), method: :delete %>
+        </div></td>
+      </table>
+    </div>
+    <hr>
+
+
+  <% end %>
 </div>
-
-<% end %>

@@ -1,3 +1,56 @@
 // Place all the styles related to the athletes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.index-head {
+  font: sans-serif;
+  text-align: center;
+}
+
+.wrapping {
+  width: 80%;
+  padding: 10px 10% 10px 10%;
+}
+
+.wrapping a {
+  text-decoration: none;
+  color: rgb(121, 142, 179);
+}
+
+.wrapping a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+.create {
+  float: right;
+}
+
+.index table {
+  width: 100%;
+  text-align: right;
+}
+
+.index td {
+  width: 33%;
+}
+
+.sport {
+  text-align: left;
+}
+
+.wrapping hr {
+  clear: both;
+}
+
+.hidden-table table {
+  width: 100%;
+}
+
+.hidden-table th, td {
+  border-bottom: 1px solid white;
+  text-align: left;
+}
+
+.hidden-table th {
+  font-size: 30px;
+}

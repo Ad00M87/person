@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Person</title>
+    <title>Athletes</title>
     <%= csrf_meta_tags %>
-
+    <script type="text/javascript" src="../../assets/javascripts/athletes.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <header class="navigation">
+      <h4>Athlete Index - The mose comprehensive list of athletes you don't know about!</h4>
       <%= render 'layouts/navbar' %>
     </header>
       <%= yield %>

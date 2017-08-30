@@ -1,8 +1,53 @@
-<h1><%= @athlete.name %></h1>
-<h3>AGE: <%= @athlete.age %></h3>
-<h3>SPORT: <%= @athlete.sport %></h3>
-<h3>CAREER LENGTH: <%= @athlete.years_participated %> years</h3>
-<h3>GENDER: <%= @athlete.gender %></h3>
-<h3>ALIVE <%= @athlete.alive ? 'Yes' : 'No' %></h3>
+<div class="wrapping">
 
-<%= link_to 'Edit', edit_athlete_path(@athlete) %>
+  <div class="individual">
+
+    <h1><%= @athlete.name %></h1>
+
+    <div class="left">
+      <h3>AGE: <%= @athlete.age %></h3>
+      <h3>SPORT: <%= @athlete.sport %></h3>
+      <h3>CAREER LENGTH: <%= @athlete.years_participated %> years</h3>
+    </div>
+    <div class="right">
+      <h3>GENDER: <%= @athlete.gender %></h3>
+      <h3>ALIVE <%= @athlete.alive ? 'Yes' : 'No' %></h3>
+    </div>
+
+  </div>
+  <hr>
+  <div class="left">
+    <button onclick="showLikes" type="button" name="button">Show Likes</button>
+  </div>
+  <div class="right">
+    <%= link_to 'Edit', edit_athlete_path(@athlete) %>
+  </div>
+  <div class="hidden-table">
+    <table id="like-table">
+      <tr>
+        <th>What is your favorite...</th>
+        <th>Answer</th>
+      </tr>
+      <tr>
+        <td>Pokemon</td>
+        <td><%= @athlete.like.pokemon %></td>
+      </tr>
+      <tr>
+        <td>Rock Band</td>
+        <td><%= @athlete.like.band %></td>
+      </tr>
+      <tr>
+        <td>Movie quote</td>
+        <td><%= @athlete.like.movie_quote %></td>
+      </tr>
+      <tr>
+        <td>Lord of the Rings Character</td>
+        <td><%= @athlete.like.lotr_character %></td>
+      </tr>
+      <tr>
+        <td>Chuck Norris coding Fact</td>
+        <td><%= @athlete.like.chuck_fact %></td>
+      </tr>
+    </table>
+  </div>
+</div>
